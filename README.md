@@ -1,4 +1,4 @@
-# monorepo-template-ts-pnpm
+# template-pnpm-typescript-monorepo
 
 ## Highlights
 - changesets
