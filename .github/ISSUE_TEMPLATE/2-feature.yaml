@@ -1,4 +1,4 @@
-name: Suggest A Feature
+name: "\U0001F680 Suggest A Feature"
 description: "Add new functionality to a package."
 title: "[Feature]"
 labels: [ "feature-triage" ]

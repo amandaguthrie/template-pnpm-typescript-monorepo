@@ -46,7 +46,7 @@ None
 
 #### \> ✨ New Package(s)
 
-- [ ] Followed package naming convention? `@amandaguthrie/panda-preset-${category_one}-${package}`
+- [ ] Followed package naming convention?
 - [ ] `package.json` version is 0.0.0?
 - [ ] `package.json` `private: true` is removed and `publishconfig.access: "public"`?
 - [ ] `package.json` repository `name`, `description`, and `repostory.directory` are updated?
