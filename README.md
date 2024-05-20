@@ -25,12 +25,12 @@
 
 #### `.github` directory
 ##### `composite-actions/install/action.yml`
-[] Update `Setup Git User` command email and name
+[ ] Update `Setup Git User` command email and name
 ##### `ISSUE_TEMPLATE` directory
-[] Update `config.yml` with repository discussions link
+[ ] Update `config.yml` with repository discussions link
 
 For each template:
-[] Update package `options`
+[ ] Update package `options`
 
 ##### `workflows` directory
 **`quality.yml`**
@@ -45,13 +45,13 @@ For each template:
 - Runs on branch `main` for any pushes that contain changes in `.changeset` or `packages`.
 - Builds and publishes packages if there is a changeset version, otherwise releases changes to the `dev` tag.
 
-[] Update repository in if statement to your repo
+[ ] Update repository in if statement to your repo
 
 #### `packages/_template` directory
 ##### `package.json`
-[] Update `name`
-[] Update `description`
-[] Update `author`
-[] Update `repository.url` and `repository.directory`
-[] Remove `private` if publishing to registry
-[] If npm registry is public, update `publishConfig`
+[ ] Update `name`
+[ ] Update `description`
+[ ] Update `author`
+[ ] Update `repository.url` and `repository.directory`
+[ ] Remove `private` if publishing to registry
+[ ] If npm registry is public, update `publishConfig`
