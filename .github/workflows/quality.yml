@@ -20,6 +20,8 @@ concurrency:
 jobs:
   prettier:
     name: Prettier
+    # Don't run on the first run after creating from template. (run_number == 1).
+    if: github.run_number != 1
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,6 +35,8 @@ jobs:
 
   tests:
     name: Unit Tests
+    # Don't run on the first run after creating from template. (run_number == 1).
+    if: github.run_number != 1
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,6 +50,8 @@ jobs:
 
   eslint:
     name: ESLint
+    # Don't run on the first run after creating from template. (run_number == 1).
+    if: github.run_number != 1
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -61,6 +67,8 @@ jobs:
 
   types:
     name: TypeScript
+    # Don't run on the first run after creating from template. (run_number == 1).
+    if: github.run_number != 1
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

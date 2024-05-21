@@ -3,6 +3,6 @@
   "include": ["src"],
   "compilerOptions": {
     "baseUrl": ".",
-    "module": "ES2022",
-  },
+    "module": "ES2022"
+  }
 }
