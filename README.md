@@ -15,8 +15,8 @@
 
 ### GitHub Repository
 
-- Set an NPM auth token as a GitHub secret with key `NPM_TOKEN` to be used to publish to NPM via release workflow.
-- Set a GitHub personal access token as a GitHub secret with key `GH_PAT` to automate changeset pull requests via
+- [] Set an NPM auth token as a GitHub secret with key `NPM_TOKEN` to be used to publish to NPM via release workflow.
+- [] Set a GitHub personal access token as a GitHub secret with key `GH_PAT` to automate changeset pull requests via
   release workflow.
 
 ### Project Files
