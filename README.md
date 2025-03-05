@@ -3,12 +3,11 @@
 ## Highlights
 
 - changesets
-- eslint
 - GitHub issue templates
 - GitHub quality and release workflows
 - pnpm workspace monorepo
-- prettier
-- Top-level build, reset, lint, prettier, test, typecheck, and release scripts.
+- biome
+- Top-level build, reset, biome, test, typecheck, and release scripts.
 - Typescript
 
 ## Initial Configuration
