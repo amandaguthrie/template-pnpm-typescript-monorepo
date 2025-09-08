@@ -48,8 +48,8 @@ jobs:
       - name: Run tests
         run: pnpm test
 
-  eslint:
-    name: ESLint
+  format:
+    name: Format
     # Don't run on the first run after creating from template. (run_number == 1).
     if: github.run_number != 1
     runs-on: ubuntu-latest
@@ -60,8 +60,8 @@ jobs:
       - name: Install
         uses: ./.github/composite-actions/install
 
-      - name: Run ESLint
-        run: pnpm lint
+      - name: Run Biome
+        run: pnpm format
         env:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
