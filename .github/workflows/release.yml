@@ -3,12 +3,10 @@ name: Publish
 on:
   push:
     paths:
-      - '.changeset/**'
-      - 'packages/**'
-      - '.npmrc'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
-      - 'pnpm-workspace.yaml'
+      - '!apps/**'
+      - '!.gitignore'
+      - '!LICENSE'
+      - '!README.md'
     branches:
       - main
 
@@ -25,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
