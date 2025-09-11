@@ -25,9 +25,9 @@
     "release:dev:publish": "changeset publish --no-git-tag --tag dev"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.3",
+    "@biomejs/biome": "2.2.4",
     "@changesets/changelog-github": "^0.5.1",
-    "@changesets/cli": "^2.29.6",
+    "@changesets/cli": "^2.29.7",
     "@types/node": "^24.3.1",
     "glob": "^11.0.3",
     "rimraf": "^6.0.1",
@@ -41,6 +41,8 @@
     "pnpm": "^10.0.0"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

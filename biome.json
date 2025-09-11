@@ -1,20 +1,39 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.2.3/schema.json",
-	"files": {
-		"includes": ["**", "!**/build", "!**/dist", "!**/node_modules", "!**/*.md", "!**/pnpm-lock.yaml"]
+	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on",
+				"useSortedAttributes": "on",
+				"useSortedKeys": "on",
+				"useSortedProperties": "on"
+			}
+		}
 	},
-	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+	"files": {
+		"includes": [
+			"**",
+			"!**/build",
+			"!**/dist",
+			"!**/node_modules",
+			"!**/*.md",
+			"!**/pnpm-lock.yaml",
+			"!**/.svelte-kit",
+			"!**/*.*svelte*",
+			"!**/package.json"
+		]
+	},
 	"formatter": {
 		"lineWidth": 120
 	},
 	"javascript": {
 		"formatter": {
+			"bracketSpacing": true,
 			"enabled": true,
-			"quoteStyle": "single",
 			"jsxQuoteStyle": "double",
-			"trailingCommas": "all",
+			"quoteStyle": "single",
 			"semicolons": "always",
-			"bracketSpacing": true
+			"trailingCommas": "all"
 		}
 	},
 	"json": {
@@ -29,18 +48,17 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true,
-
 			"correctness": {
 				"noUnusedVariables": {
 					"level": "error"
 				}
 			},
-			"suspicious": {
-				"noExplicitAny": "off"
-			},
+			"recommended": true,
 			"style": {
 				"noNonNullAssertion": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "off"
 			}
 		}
 	}

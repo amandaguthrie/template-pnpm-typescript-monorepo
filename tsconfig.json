@@ -1,14 +1,10 @@
 {
-  "extends": "./tsconfig.build.json",
-  "compilerOptions": {
-    "incremental": true,
-    "tsBuildInfoFile": "node_modules/.cache/.tsbuildinfo",
-    "baseUrl": "."
-  },
-  "include": [
-    "packages/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+	"compilerOptions": {
+		"baseUrl": ".",
+		"incremental": true,
+		"tsBuildInfoFile": "node_modules/.cache/.tsbuildinfo"
+	},
+	"exclude": ["node_modules"],
+	"extends": "./tsconfig.build.json",
+	"include": ["packages/**/*.ts"]
 }

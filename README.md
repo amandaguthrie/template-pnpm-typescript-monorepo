@@ -45,7 +45,7 @@ For each template:
 **`quality.yml`**
 
 - Runs on branch `main` for any push or pull request.
-- Runs prettier, eslint, and TypeScript type checks.
+- Runs biome and TypeScript type checks.
 
 **`release.yml`**
 > [!CAUTION]
