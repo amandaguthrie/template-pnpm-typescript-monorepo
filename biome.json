@@ -1,12 +1,9 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.2.4/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
 	"assist": {
 		"actions": {
 			"source": {
-				"organizeImports": "on",
-				"useSortedAttributes": "on",
-				"useSortedKeys": "on",
-				"useSortedProperties": "on"
+				"organizeImports": "on"
 			}
 		}
 	},
@@ -50,7 +47,8 @@
 		"rules": {
 			"correctness": {
 				"noUnusedVariables": {
-					"level": "error"
+					"level": "error",
+					"options": {}
 				}
 			},
 			"recommended": true,

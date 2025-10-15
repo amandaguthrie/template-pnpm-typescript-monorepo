@@ -13,20 +13,19 @@
 		"directory": "packages/_template"
 	},
 	"license": "MIT",
-	"main": "dist/index.js",
-	"module": "dist/index.mjs",
-	"svelte": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"type": "module",
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"types": "dist/index.d.cts",
 	"exports": {
 		".": {
-			"require": "./dist/index.js",
+			"types": "./dist/index.d.cts",
 			"source": "./src/index.ts",
-			"svelte": "./dist/index.js",
-			"types": "./dist/index.d.ts",
 			"import": {
-				"types": "./dist/index.d.mts",
-				"default": "./dist/index.mjs"
-			}
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": "./dist/index.cjs"
 		},
 		"./package.json": "./package.json"
 	},
