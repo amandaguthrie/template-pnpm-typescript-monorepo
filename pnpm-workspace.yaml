@@ -1,3 +1,4 @@
+# yaml-language-server: https://www.schemastore.org/pnpm-workspace.json
 packages:
   - 'apps/**'
   - 'packages/**'
