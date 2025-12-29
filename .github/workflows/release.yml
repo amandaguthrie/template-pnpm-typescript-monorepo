@@ -12,6 +12,10 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   release:
     # Don't run on forks by default.
@@ -39,7 +43,8 @@ jobs:
         with:
           publish: pnpm release
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          # Use OIDC for npm authentication instead of NPM_TOKEN
+          NPM_TOKEN: '' # https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
           GITHUB_TOKEN: ${{secrets.GH_PAT}}
 
       - name: Release to dev tag
@@ -49,5 +54,6 @@ jobs:
           pnpm release:dev:version
           pnpm release:dev:publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          # Use OIDC for npm authentication instead of NPM_TOKEN
+          NPM_TOKEN: '' # https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
           GITHUB_TOKEN: ${{secrets.GH_PAT}}
