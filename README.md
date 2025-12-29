@@ -14,9 +14,10 @@
 
 ### GitHub Repository
 
-- [ ] Set an NPM auth token as a GitHub secret with key `NPM_TOKEN` to be used to publish to NPM via release workflow.
+- [ ] Set up [trusted publishing](https://docs.npmjs.com/trusted-publishers) on npmjs for the repository.
+- [ ] Configure the repository's action **Workflow Permissions** to **Read and write permissions** and to **Allow GitHub Actions to create and approve pull requests** for the changesets action.
 - [ ] Set a GitHub personal access token as a GitHub secret with key `GH_PAT` to automate changeset pull requests via
-  release workflow.
+  release workflow. The token should have access to "**Read** access to metadata" and "**Read** and **Write** access to code and pull requests" on the repository for the changesets action to maintain release pull requests.
 
 ### Project Files
 
@@ -49,7 +50,7 @@ For each template:
 
 **`release.yml`**
 > [!CAUTION]
-> - Requires an NPM auth token to be set as `NPM_TOKEN` in repository secrets to publish to NPM.
+> - Requires [trusted publishing](https://docs.npmjs.com/trusted-publishers) to be set up on npmjs to publish packages.
 > - Requires a GitHub personal access token to be set in repository secrets as `GH_PAT` to automate changeset pull
     requests.
 
