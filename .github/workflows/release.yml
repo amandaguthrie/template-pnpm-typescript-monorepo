@@ -12,10 +12,6 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
-permissions:
-  id-token: write
-  contents: read
-
 jobs:
   release:
     # Don't run on forks by default.
@@ -24,6 +20,9 @@ jobs:
       github.repository == 'amandaguthrie/template-pnpm-typescript-monorepo' && 
       github.run_number != 1
     name: Release
+    permissions:
+      id-token: write
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
