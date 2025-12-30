@@ -21,13 +21,15 @@ jobs:
       github.run_number != 1
     name: Release
     permissions:
-      id-token: write
-      contents: read
+      contents: write # to create release (changesets/action)
+      id-token: write # OpenID Connect token needed for provenance
+      pull-requests: write # to create pull request (changesets/action)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v5
         with:
+          # This makes actions fetch all git history so changesets can generate changelogs with the correct commits
           fetch-depth: 0
 
       - name: Install
@@ -40,11 +42,13 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: pnpm release
         env:
           # Use OIDC for npm authentication instead of NPM_TOKEN
           NPM_TOKEN: '' # https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
           GITHUB_TOKEN: ${{secrets.GH_PAT}}
+          NPM_CONFIG_PROVENANCE: true
 
       - name: Release to dev tag
         if: steps.changesets.outputs.published != 'true'
@@ -56,3 +60,4 @@ jobs:
           # Use OIDC for npm authentication instead of NPM_TOKEN
           NPM_TOKEN: '' # https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
           GITHUB_TOKEN: ${{secrets.GH_PAT}}
+          NPM_CONFIG_PROVENANCE: true
